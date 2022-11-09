@@ -1,26 +1,10 @@
 <div class="card-container">
-  <div class="card" *ngFor="let card of choicesDisplay">
-    <div class="image-container">
-      <img
-        (click)="toggleVisibility(card.gif)"
-        [ngStyle]="{ opacity: hide === true ? 1 : 0 }"
-        class="image"
-        src=" {{ '../../../../assets/Gifs/' + card.gif }} "
-      />
-    </div>
-    <div class="choices-container">
-      <p [ngClass]="{ fade: service.choiceCheck(card.gif, card.choiceOne) }">
-        {{ card.choiceOne }}
-      </p>
-      <p [ngClass]="{ fade: service.choiceCheck(card.gif, card.choiceTwo) }">
-        {{ card.choiceTwo }}
-      </p>
-      <p [ngClass]="{ fade: service.choiceCheck(card.gif, card.choiceThree) }">
-        {{ card.choiceThree }}
-      </p>
-      <p [ngClass]="{ fade: service.choiceCheck(card.gif, card.choiceFour) }">
-        {{ card.choiceFour }}
-      </p>
-    </div>
-  </div>
+  <card-child
+    [choiceOne]="card.choiceOne"
+    [choiceTwo]="card.choiceTwo"
+    [choiceThree]="card.choiceThree"
+    [choiceFour]="card.choiceFour"
+    [gif]="card.gif"
+    *ngFor="let card of choicesDisplay"
+  ></card-child>
 </div>

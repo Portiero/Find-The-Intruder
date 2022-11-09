@@ -1,0 +1,55 @@
+.card {
+  width: 250px;
+  height: fit-content;
+
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px gray;
+
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.image-container {
+  width: 250px;
+  height: auto;
+}
+
+.image {
+  width: inherit;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.choices-container {
+  text-align: center;
+  color: #1393ab;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: sans-serif, "Times New Roman", Times, serif;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+p {
+  cursor: pointer;
+  height: 0px;
+}
+
+.wrong {
+  opacity: 0.4;
+  transition: opacity 0.1s ease-in;
+}
+
+.display {
+  visibility: visible;
+}
+
+.correct {
+  color: #0f9400;
+}

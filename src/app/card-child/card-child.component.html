@@ -1,1 +1,43 @@
-<p>card-child works!</p>
+<div class="card" (click)="toggleVisibility(gif)">
+  <div class="image-container">
+    <img
+      [ngStyle]="{ opacity: hide === true ? 0 : 1 }"
+      class="image"
+      src=" {{ '../../../../assets/Gifs/' + gif }} "
+    />
+  </div>
+  <div class="choices-container">
+    <p
+      [ngClass]="{
+        wrong: service.falseCheck(gif, choiceOne) && hide === false,
+        correct: service.choiceCheck(gif, choiceOne) && hide === false
+      }"
+    >
+      {{ choiceOne }}
+    </p>
+    <p
+      [ngClass]="{
+        wrong: service.falseCheck(gif, choiceTwo) && hide === false,
+        correct: service.choiceCheck(gif, choiceTwo) && hide === false
+      }"
+    >
+      {{ choiceTwo }}
+    </p>
+    <p
+      [ngClass]="{
+        wrong: service.falseCheck(gif, choiceThree) && hide === false,
+        correct: service.choiceCheck(gif, choiceThree) && hide === false
+      }"
+    >
+      {{ choiceThree }}
+    </p>
+    <p
+      [ngClass]="{
+        wrong: service.falseCheck(gif, choiceFour) && hide === false,
+        correct: service.choiceCheck(gif, choiceFour) && hide === false
+      }"
+    >
+      {{ choiceFour }}
+    </p>
+  </div>
+</div>

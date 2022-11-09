@@ -9,6 +9,22 @@
   display: flex;
 }
 
+.back {
+  position: absolute;
+  left: 140px;
+  top: 100px;
+  border-radius: 50px;
+  background: rgb(32, 86, 194);
+  height: 50px;
+  width: 100px;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: rgba(245, 245, 245, 0.84);
+  cursor: pointer;
+  border: solid 2px black;
+}
+
 @media (max-width: 1040px) {
   .cards-container {
     width: 796px;

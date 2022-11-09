@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { GameLogicService } from '../game-logic.service';
 
 @Component({
   selector: 'card',
@@ -8,9 +7,8 @@ import { GameLogicService } from '../game-logic.service';
 })
 export class CardComponent {
   choicesDisplay: Choice[];
-  hide: boolean = true;
 
-  constructor(public service: GameLogicService) {
+  constructor() {
     this.choicesDisplay = [
       new Choice(
         'China',
@@ -56,12 +54,6 @@ export class CardComponent {
       ),
     ];
   }
-
-  toggleVisibility(gif: string) {
-    if (gif) {
-      this.hide = !this.hide;
-    } else return;
-  }
 }
 
 export class Choice {
@@ -69,7 +61,7 @@ export class Choice {
   choiceTwo: string;
   choiceThree: string;
   choiceFour: string;
-  public gif: string;
+  gif: string;
 
   constructor(
     choiceOne: string,

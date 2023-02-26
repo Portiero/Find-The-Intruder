@@ -10,9 +10,6 @@
 }
 
 .back {
-  position: absolute;
-  left: 140px;
-  top: 100px;
   border-radius: 50px;
   background: rgb(32, 86, 194);
   height: 50px;

@@ -1,6 +1,7 @@
 <div class="card" (click)="toggleVisibility(gif)">
   <div class="image-container">
     <img
+      loading="lazy"
       [ngStyle]="{ opacity: hide === true ? 0 : 1 }"
       class="image"
       src=" {{ 'assets/Gifs/' + gif }} "
